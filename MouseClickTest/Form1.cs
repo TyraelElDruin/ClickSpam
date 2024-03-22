@@ -17,17 +17,15 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
-        clickTimer.Interval = 10;
+        clickTimer.Interval = 1;
         clickTimer.Tick += ClickTimer_Tick;
         gHook = new GlobalKeyboardHook();
         gHook.KeyPressed += GHook_KeyPressed;
     }
 
-    private async void ClickTimer_Tick(object? sender, EventArgs e)
+    private void ClickTimer_Tick(object? sender, EventArgs e)
     {
-        // Simulate mouse click
         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        await Task.Delay(1);
         mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         this.Text = $"Clicks: {++Clicks}";
     }
