@@ -1,4 +1,4 @@
-# MouseClickTest
+# Click Spammer
 
 Demo:
 
