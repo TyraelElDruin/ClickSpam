@@ -2,4 +2,4 @@
 
 Demo:
 
-![image](https://github.com/TyraelElDruin/ClickSpam/assets/3617290/3b712d90-e237-40c5-a8e2-6fb4454d8e78)
+![ClickSpammerDemo](https://github.com/TyraelElDruin/ClickSpam/assets/3617290/d6b616d8-7323-46ba-9b89-826cb55de51d)
