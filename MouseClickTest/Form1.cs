@@ -13,7 +13,6 @@ public partial class Form1 : Form
     private const int MOUSEEVENTF_LEFTDOWN = 0x02;
     private const int MOUSEEVENTF_LEFTUP = 0x04;
     private Timer clickTimer = new();
-
     public Form1()
     {
         InitializeComponent();
@@ -22,7 +21,6 @@ public partial class Form1 : Form
         gHook = new GlobalKeyboardHook();
         gHook.KeyPressed += GHook_KeyPressed;
     }
-
     private void ClickTimer_Tick(object? sender, EventArgs e)
     {
         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
@@ -34,13 +32,11 @@ public partial class Form1 : Form
         base.OnLoad(e);
         gHook.Hook();
     }
-
     protected override void OnFormClosing(FormClosingEventArgs e)
     {
         gHook.Unhook();
         base.OnFormClosing(e);
     }
-
     private void GHook_KeyPressed(object? sender, KeyPressedEventArgs e)
     {
         if (e.Key == Keys.M)
